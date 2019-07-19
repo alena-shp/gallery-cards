@@ -1,0 +1,23 @@
+@import "../../../scss/colors.scss";
+.desktop-language-picker {
+    margin: 0 0 0 16px;
+    p {
+        color: $color-desktop-language-picker;
+        margin-left: 16px;
+    }
+    svg {
+        color: $color-desktop-language-picker;
+    }
+}
+
+.mobile-language-picker {
+    margin: 0 16px 0 16px;
+    p {
+        color: $color-mobile-language-picker;
+        margin-left: 16px;
+    }
+}
+
+.language-button-width {
+    width: 100%;
+}

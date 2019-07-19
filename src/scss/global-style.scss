@@ -1,0 +1,78 @@
+// @import "./fonts.scss";
+@import "./typography.scss";
+@import "./colors.scss";
+@import "./sizes.scss";
+// @import "./fonts.scss";
+
+body,
+html {
+  @include text-body;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  // overflow: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}
+
+.material-icons.sm {
+  font-size: 18px;
+}
+
+.material-icons.lg {
+  font-size: 36px;
+}
+
+.material-icons.lg2 {
+  font-size: 48px;
+}
+
+.page-container {
+  max-width: $width-content-container;
+  width: 99vw;
+}
+.section {
+  // width: 100%;
+  // height: 99vh;
+  margin: 14px 0;
+  padding: 12px;
+  @media only screen and (max-width: 1024px) {
+    padding: 8px;
+  }
+}

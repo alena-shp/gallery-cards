@@ -1,41 +1,36 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 
 import Button from "@material-ui/core/Button";
 import LanguageIcon from "@material-ui/icons/LanguageOutlined"
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 
-import "./language-picker.css"
-
-export default class index extends Component {
+export default class LanguageSwitcher extends Component {
     constructor(props) {
         super(props);
-        this.state = { anchorEl: null };
-
-        this.handleClick = this.handleClick.bind(this);
-        this.handleClose = this.handleClose.bind(this);
+        this.state = {anchorEl: null};
     }
 
-    handleClick(event) {
-        this.setState({ anchorEl: event.currentTarget })
+    handleClick = (event) => {
+        this.setState({anchorEl: event.currentTarget})
     }
 
-    handleClose() {
-        this.setState({ anchorEl: null })
+    handleClose = () => {
+        this.setState({anchorEl: null})
     }
 
     render() {
         const anchorEl = this.state.anchorEl;
-        const isMobile = this.props.isMobileDevice;
+        const isMobile = this.props.device;
 
         return (
             <div className={isMobile ? "mobile-language-picker" : "desktop-language-picker"}>
                 <Button aria-controls="simple-menu"
-                    aria-haspopup="true"
-                    onClick={this.handleClick}
-                    className="language-button-width"
+                        aria-haspopup="true"
+                        onClick={this.handleClick}
+                        className="language-button-width"
                 >
-                    <LanguageIcon />
+                    <LanguageIcon/>
                     <p>Lang</p>
                 </Button>
                 <Menu

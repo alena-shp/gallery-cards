@@ -1,28 +1,29 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+
+import {Link} from "react-router-dom";
 
 import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
+
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
+
 import Divider from "@material-ui/core/Divider";
+
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 
-import LanguagePicker from '../language-picker/index.jsx'
+import logo from '../../assets/logo.png';
 
-import logo from '../../../assets/logo.png';
-import './mobile-navbar.css';
-
-export default class index extends Component {
+export default class MobileNavbar extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            isOpen: false
-        };
-
-        this.iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
-        this.toggleDrawer = this.toggleDrawer.bind(this);
+            isOpen: false,
+            iOS: process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent),
+            toggleDrawer: this.toggleDrawer.bind(this)
+        }
     }
 
     toggleDrawer = (state) => event => {
@@ -33,15 +34,18 @@ export default class index extends Component {
 
     render() {
         return (
-            <div className="mobile-nav-bar">
+            <div className="mobile-navbar">
                 <div className="header-items-holder">
-                    <IconButton edge="start" color="inherit" aria-label="Menu"
+                    <IconButton
+                        edge="start"
+                        color="inherit"
+                        aria-label="Menu"
                         onClick={this.toggleDrawer(true)}>
-                        <MenuIcon />
+                        <MenuIcon/>
                     </IconButton>
 
                     <div className="mobile-logo">
-                        <img src={logo} alt="site logo"></img>
+                        <img src={logo} alt="site logo"/>
                         <h1>Title</h1>
                     </div>
                 </div>
@@ -55,20 +59,20 @@ export default class index extends Component {
                     <div className="drawer-content">
                         <List component="nav">
                             <ListItem button>
-                                <ListItemText primary="Sign Up" />
+                                <ListItemText primary="Sign Up"/>
                             </ListItem>
                             <ListItem button>
-                                <ListItemText primary="Log In" />
+                                <ListItemText primary="Log In"/>
                             </ListItem>
                             <ListItem button>
-                                <ListItemText primary="Latest news" />
+                                <ListItemText primary="Latest news"/>
                             </ListItem>
                             <ListItem button>
-                                <ListItemText primary="About" />
+                                <ListItemText primary="About"/>
                             </ListItem>
-                        </List >
-                        <Divider />
-                        <LanguagePicker isMobileDevice={this.props.isMobileDevice} />
+                        </List>
+                        <Divider/>
+                        {this.props.children}
                     </div>
                 </SwipeableDrawer>
             </div>

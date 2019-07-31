@@ -7,17 +7,43 @@
 body,
 html {
   @include text-body;
-  margin: 0;
-  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  // overflow: hidden;
+  padding: 0;
 }
+
+#root {
+  width: 100%;
+  height: 100%;
+
+  div {
+    box-sizing: border-box;
+  }
+
+  .page-container {
+    width: 100%;
+    max-width: $width-content-container;
+    //box-sizing: border-box;
+    margin: auto;
+
+    .section {
+      width: 100%;
+      padding: $vertical-intends-desktop $horizontal-intends-desktop;
+      @media only screen and (max-width: 960px) {
+        padding: $vertical-intends-tablets $horizontal-intends-tablets;
+      }
+      @media only screen and (max-width: 600px) {
+        padding: $vertical-intends-mobiles $horizontal-intends-mobiles;
+      }
+    }
+  }
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -61,18 +87,4 @@ a:hover {
 
 .material-icons.lg2 {
   font-size: 48px;
-}
-
-.page-container {
-  max-width: $width-content-container;
-  width: 99vw;
-}
-.section {
-  // width: 100%;
-  // height: 99vh;
-  margin: 14px 0;
-  padding: 12px;
-  @media only screen and (max-width: 1024px) {
-    padding: 8px;
-  }
 }

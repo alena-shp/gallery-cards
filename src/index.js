@@ -7,9 +7,9 @@ import { Provider } from "react-redux";
 
 import * as serviceWorker from './serviceWorker';
 
-// import Home from "./app/Home/index.jsx";
-// import Profile from "./app/Profile/index.jsx";
-import Event from "./app/Event/index.jsx";
+// import Home from "./app/Home/index.js";
+// import Profile from "./app/Profile/index.js";
+import Event from "./app/Event";
 
 // Material UI Theme
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";

@@ -12,14 +12,14 @@ export default class Event extends Component {
         <Navbar />
         <div className="content">
           <h1>Add photos of yours from your sporting life</h1>
-          <div className="section gallery">
+          <div className="gallery">
             <header className="gallery__header">
               <div className="gallery__title">Media</div>
               <Button variant="outlined" size="medium">
                 create album
               </Button>
             </header>
-            <div>
+            <div className="gallery__cards">
               <div className="card">
                 <img
                   className="card__img"

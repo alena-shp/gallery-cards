@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import Button from '@material-ui/core/Button'
-import DeleteIcon from '@material-ui/icons/Delete'
-import IconButton from '@material-ui/core/IconButton'
-
+import iconDelete from './../../assets/delete.svg'
 import Navbar from '../../components/navbar'
 
 export default class Event extends Component {
@@ -15,9 +12,7 @@ export default class Event extends Component {
           <div className="gallery">
             <header className="gallery__header">
               <div className="gallery__title">Media</div>
-              <Button variant="outlined" size="medium">
-                create album
-              </Button>
+              <button>create album</button>
             </header>
             <div className="gallery__cards">
               <div className="card">
@@ -28,35 +23,17 @@ export default class Event extends Component {
                 />
                 <div className="card__title">Album name</div>
                 <div className="card__actions">
-                  <Button size="small">edit album</Button>
-                  <IconButton aria-label="Delete">
-                    <DeleteIcon fontSize="small" />
-                  </IconButton>
-                </div>
-              </div>
-              <div className="card">
-                <img
-                  className="card__img"
-                  src="https://picsum.photos/300/150"
-                  alt=""
-                />
-                <div className="card__title">Album name</div>
-                <div className="card__actions">
-                  <Button size="small">edit album</Button>
-                  <IconButton aria-label="Delete">
-                    <DeleteIcon fontSize="small" />
-                  </IconButton>
+                  <button className="button-edit">edit album</button>
+                  <div className="button-delete">
+                    <img src={iconDelete} alt="" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <footer className="actions">
-            <Button variant="outlined" size="medium">
-              I will do it later
-            </Button>
-            <Button variant="contained" size="medium">
-              Finish
-            </Button>
+          <footer className="gallery__actions">
+            <button className="button-later">I will do it later</button>
+            <button className="button-finish">Finish</button>
           </footer>
         </div>
       </div>

@@ -28,6 +28,10 @@
       border-radius: 3px;
       color: #364e9e;
       height: 42px;
+      font-family: 'Medium', 'Roboto';
+      font-size: 14px;
+      text-transform: uppercase;
+      outline: none;
       width: 200px;
     }
   }
@@ -47,11 +51,81 @@
 
     .card {
       margin-left: 20px;
+      border: 1px solid #70707047;
+      border-radius: 3px;
     }
   }
 }
 
-.card__img {
-  width: 288px;
-  height: 162px;
+.card {
+  &__img {
+    display: block;
+    height: 162px;
+    width: 288px;
+  }
+
+  &__title {
+    color: #2a2626de;
+    font-family: 'Medium', 'Roboto';
+    font-size: 20px;
+    height: 24px;
+    margin: 8px 14px 0 14px;
+    text-align: left;
+    width: 113px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 14px;
+
+    .button-edit {
+      color: #000000de;
+      font-family: 'Medium', 'Roboto';
+      font-size: 14px;
+      letter-spacing: 0;
+      padding: 0;
+      text-transform: uppercase;
+      border: none;
+      outline: none;
+    }
+
+    .button-delete {
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.gallery__actions {
+  margin-top: 44px;
+  margin-right: -100px;
+  display: flex;
+  justify-content: flex-end;
+
+  .button-later {
+    border: 1px solid #0d47a1;
+    border-radius: 4px;
+    color: #0d47a1;
+    font-family: 'Medium', 'Roboto';
+    font-size: 14px;
+    height: 50px;
+    outline: none;
+    text-transform: uppercase;
+    width: 183px;
+  }
+
+  .button-finish {
+    background: #0d47a1;
+    border: 1px solid #0d47a1;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: 'Medium', 'Roboto';
+    font-size: 14px;
+    height: 50px;
+    margin-left: 64px;
+    outline: none;
+    text-transform: uppercase;
+    width: 160px;
+  }
 }

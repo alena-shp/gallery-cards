@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Button from '../../components/Button'
 import Card from '../../components/Card'
 import Navbar from '../../components/navbar'
 
@@ -40,7 +41,7 @@ export default class Event extends Component {
           <div className="gallery">
             <header className="gallery__header">
               <div className="gallery__title">Media</div>
-              <button>create album</button>
+              <Button className="button-create-album">create album</Button>
             </header>
             <div className="gallery__cards">
               {galleryData.map(card => (
@@ -53,8 +54,10 @@ export default class Event extends Component {
             </div>
           </div>
           <footer className="gallery__actions">
-            <button className="button-later">I will do it later</button>
-            <button className="button-finish">Finish</button>
+            <Button className="button-later">I will do it later</Button>
+            <Button className="button-finish" typePrimary>
+              Finish
+            </Button>
           </footer>
         </div>
       </div>

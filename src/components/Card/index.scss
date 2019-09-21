@@ -27,6 +27,7 @@
 
     .button-edit {
       color: #000000de;
+      cursor: pointer;
       font-family: 'Medium', 'Roboto';
       font-size: 14px;
       letter-spacing: 0;
@@ -38,6 +39,7 @@
 
     .button-delete {
       border: none;
+      cursor: pointer;
       outline: none;
     }
   }

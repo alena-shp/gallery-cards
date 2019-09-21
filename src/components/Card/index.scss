@@ -1,0 +1,44 @@
+.card {
+  border: 1px solid #70707047;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  width: 288px;
+
+  &__img {
+    border-radius: 3px 3px 0 0;
+    display: block;
+    height: 162px;
+    width: 100%;
+  }
+
+  &__title {
+    color: #2a2626de;
+    font-family: 'Medium', 'Roboto';
+    font-size: 20px;
+    margin: 8px 14px 0 14px;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 10px 14px;
+
+    .button-edit {
+      color: #000000de;
+      font-family: 'Medium', 'Roboto';
+      font-size: 14px;
+      letter-spacing: 0;
+      padding: 0;
+      text-transform: uppercase;
+      border: none;
+      outline: none;
+    }
+
+    .button-delete {
+      border: none;
+      outline: none;
+    }
+  }
+}

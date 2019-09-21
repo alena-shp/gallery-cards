@@ -1,6 +1,34 @@
 import React, { Component } from 'react'
-import iconDelete from './../../assets/delete.svg'
+import Card from '../../components/Card'
 import Navbar from '../../components/navbar'
+
+const galleryData = [
+  {
+    id: 1,
+    imageUrl: 'https://picsum.photos/300/150',
+    title: 'Album name'
+  },
+  {
+    id: 2,
+    imageUrl: 'https://picsum.photos/300/150',
+    title: 'Album name'
+  },
+  {
+    id: 3,
+    imageUrl: 'https://picsum.photos/300/140',
+    title: 'Album name'
+  },
+  {
+    id: 4,
+    imageUrl: 'https://picsum.photos/280/150',
+    title: 'Album name'
+  },
+  {
+    id: 5,
+    imageUrl: 'https://picsum.photos/320/150',
+    title: 'Album name. Lorem ipsum dolor sit amet.'
+  }
+]
 
 export default class Event extends Component {
   render() {
@@ -15,20 +43,13 @@ export default class Event extends Component {
               <button>create album</button>
             </header>
             <div className="gallery__cards">
-              <div className="card">
-                <img
-                  className="card__img"
-                  src="https://picsum.photos/300/150"
-                  alt=""
+              {galleryData.map(card => (
+                <Card
+                  key={card.id}
+                  imageUrl={card.imageUrl}
+                  title={card.title}
                 />
-                <div className="card__title">Album name</div>
-                <div className="card__actions">
-                  <button className="button-edit">edit album</button>
-                  <div className="button-delete">
-                    <img src={iconDelete} alt="" />
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
           <footer className="gallery__actions">

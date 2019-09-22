@@ -40,10 +40,10 @@ const albumData = [
 ]
 
 const Dialog = props => {
-  const { ...restProps } = props
+  const { onClose, ...restProps } = props
 
   return (
-    <MaterialDialog className="dialog" {...restProps}>
+    <MaterialDialog className="dialog" onClose={onClose} {...restProps}>
       <DialogContent className="dialog__content">
         <div className="album">
           <header className="album__header">
@@ -80,8 +80,10 @@ const Dialog = props => {
         </div>
       </DialogContent>
       <DialogActions className="dialog__actions">
-        <Button className="button-cancel">cancel</Button>
-        <Button className="button-save" typePrimary>
+        <Button className="button-cancel" onClick={onClose}>
+          cancel
+        </Button>
+        <Button className="button-save" onClick={onClose} typePrimary>
           save
         </Button>
       </DialogActions>

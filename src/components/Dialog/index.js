@@ -49,11 +49,12 @@ const Dialog = props => {
               className="album__title"
               defaultValue="Album name"
               margin="normal"
+              placeholder="Album name"
               variant="outlined"
             />
             <div className="album__actions">
               <Button className="button-photo">Add photo</Button>
-              <Button className="button-photo">Add link for video</Button>
+              <Button className="button-video">Add link for video</Button>
             </div>
           </header>
           <div className="album__body">

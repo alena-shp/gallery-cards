@@ -60,4 +60,23 @@
       outline: none;
     }
   }
+
+  .MuiInput-input {
+    font-size: 14px;
+    height: 40px;
+    padding-left: 20px;
+  }
+
+  .MuiInput-underline:before {
+    border-bottom: 1px solid #7070702e;
+  }
+
+  .photo {
+    &__title input {
+      font-size: 16px;
+    }
+    &__description textarea {
+      height: 130px;
+    }
+  }
 }

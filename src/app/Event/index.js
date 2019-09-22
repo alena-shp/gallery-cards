@@ -1,4 +1,4 @@
-import Event from "./event";
-import "./event.css";
+import Event from './event'
+import './event.css'
 
-export default Event;
+export default Event

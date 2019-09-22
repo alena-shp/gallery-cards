@@ -17,7 +17,7 @@ const albumData = [
     id: 1,
     imageUrl: 'https://picsum.photos/300/150',
     title: 'Photo title',
-    location: 'Location',
+    location: '',
     description:
       'Sed id nunc porttitor, rhoncus ex nec, lobortis nisi. Vestibulum pulvinar enim eu dolor fringilla pulvinar. Fusce volutpat euismod blandit.'
   },
@@ -25,7 +25,7 @@ const albumData = [
     id: 2,
     imageUrl: 'https://picsum.photos/300/150',
     title: 'Photo title',
-    location: 'Location',
+    location: '',
     description:
       'Sed id nunc porttitor, rhoncus ex nec, lobortis nisi. Vestibulum pulvinar enim eu dolor fringilla pulvinar. Fusce volutpat euismod blandit.'
   },
@@ -33,7 +33,7 @@ const albumData = [
     id: 3,
     imageUrl: 'https://picsum.photos/300/150',
     title: 'Photo title',
-    location: 'Location',
+    location: '',
     description:
       'Sed id nunc porttitor, rhoncus ex nec, lobortis nisi. Vestibulum pulvinar enim eu dolor fringilla pulvinar. Fusce volutpat euismod blandit.'
   }

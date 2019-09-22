@@ -31,13 +31,22 @@ const Card = props => {
           <div className="card__close">
             <img src={iconClose} alt="" />
           </div>
-          <TextField placeholder="Photo title" defaultValue={title} />
-          <TextField placeholder="Location" defaultValue={location} />
+          <TextField
+            placeholder="Photo title"
+            defaultValue={title}
+            className="photo__title"
+          />
+          <TextField
+            placeholder="Location"
+            defaultValue={location}
+            className="photo__location"
+          />
           <TextField
             multiline
             rows="4"
             placeholder="Description"
             defaultValue={description}
+            className="photo__description"
           />
         </Fragment>
       )}

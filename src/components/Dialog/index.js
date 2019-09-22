@@ -74,6 +74,7 @@ const Dialog = props => {
                 title={album.title}
                 location={album.location}
                 description={album.description}
+                typePhoto
               />
             ))}
           </div>

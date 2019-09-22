@@ -3,6 +3,7 @@
   border-radius: 3px;
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 288px;
 
   &__img {
@@ -10,6 +11,22 @@
     display: block;
     height: 162px;
     width: 100%;
+  }
+
+  &__close {
+    align-items: center;
+    background: #00000047;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    font-size: 24px;
+    justify-content: center;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 24px;
   }
 
   &__title {

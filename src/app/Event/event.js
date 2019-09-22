@@ -4,6 +4,7 @@ import Button from '../../components/Button'
 import Card from '../../components/Card'
 import Dialog from '../../components/Dialog'
 import Navbar from '../../components/navbar'
+import iconPlus from './../../assets/icons/plus.svg'
 
 const galleryData = [
   {
@@ -62,6 +63,7 @@ export default class Event extends Component {
                 className="button-create-album"
                 onClick={this.onDialogOpen}
               >
+                <img src={iconPlus} alt="" />
                 create album
               </Button>
             </header>
@@ -71,6 +73,7 @@ export default class Event extends Component {
                   key={card.id}
                   imageUrl={card.imageUrl}
                   title={card.title}
+                  typeAlbum
                 />
               ))}
             </div>

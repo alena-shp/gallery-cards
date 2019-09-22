@@ -79,7 +79,7 @@ const Dialog = props => {
           </div>
         </div>
       </DialogContent>
-      <DialogActions>
+      <DialogActions className="dialog__actions">
         <Button className="button-cancel">cancel</Button>
         <Button className="button-save" typePrimary>
           save

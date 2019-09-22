@@ -2,8 +2,17 @@
   .MuiDialog-paper {
     max-width: 1200px;
   }
+
   .dialog__content {
+    padding: 22px 32px 50px 32px;
+  }
+
+  .dialog__actions {
     padding: 22px 32px;
+  }
+
+  .MuiDialogActions-spacing > * + * {
+    margin-left: 20px;
   }
 }
 
@@ -33,6 +42,9 @@
 
   &__actions {
     margin-left: auto;
+    padding-left: 20px;
+    white-space: nowrap;
+
     .button:not(:first-child) {
       margin-left: 20px;
     }

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+
 import Button from '../../components/Button'
 import Card from '../../components/Card'
+import Dialog from '../../components/Dialog'
 import Navbar from '../../components/navbar'
 
 const galleryData = [
@@ -32,6 +34,21 @@ const galleryData = [
 ]
 
 export default class Event extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showDialog: true
+    }
+  }
+
+  onDialogOpen = () => {
+    this.setState({ showDialog: true })
+  }
+
+  onDialogClose = () => {
+    this.setState({ showDialog: false })
+  }
+
   render() {
     return (
       <div className="page-container">
@@ -41,7 +58,12 @@ export default class Event extends Component {
           <div className="gallery">
             <header className="gallery__header">
               <div className="gallery__title">Media</div>
-              <Button className="button-create-album">create album</Button>
+              <Button
+                className="button-create-album"
+                onClick={this.onDialogOpen}
+              >
+                create album
+              </Button>
             </header>
             <div className="gallery__cards">
               {galleryData.map(card => (
@@ -60,6 +82,7 @@ export default class Event extends Component {
             </Button>
           </footer>
         </div>
+        <Dialog open={this.state.showDialog} onClose={this.onDialogClose} />
       </div>
     )
   }

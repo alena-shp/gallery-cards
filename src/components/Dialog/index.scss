@@ -1,0 +1,23 @@
+.dialog {
+  .MuiDialog-paper {
+    max-width: 1200px;
+  }
+}
+
+.album {
+  &__header {
+    display: flex;
+  }
+  &__actions {
+    margin-left: auto;
+  }
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card {
+      margin: 0 10px 20px 10px;
+    }
+  }
+}

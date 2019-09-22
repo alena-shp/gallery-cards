@@ -10,8 +10,22 @@
   outline: none;
   text-transform: uppercase;
 
+  img {
+    margin-right: 10px;
+  }
+
   &.button--primary {
     background: #0d47a1;
     color: #ffffff;
+  }
+
+  &.button--secondary {
+    background: transparent;
+    border: 1px solid #7070702e;
+    color: #00000099;
+    font-size: 16px;
+    height: 42px;
+    min-width: 150px;
+    text-transform: none;
   }
 }

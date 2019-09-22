@@ -7,6 +7,9 @@ import TextField from '@material-ui/core/TextField'
 import Card from '../../components/Card'
 import Button from '../../components/Button'
 
+import iconAddPhoto from './../../assets/icons/add-photo.svg'
+import iconVideo from './../../assets/icons/video.svg'
+
 import './index.css'
 
 const albumData = [
@@ -53,8 +56,14 @@ const Dialog = props => {
               variant="outlined"
             />
             <div className="album__actions">
-              <Button className="button-photo">Add photo</Button>
-              <Button className="button-video">Add link for video</Button>
+              <Button className="button-photo" typeSecondary>
+                <img src={iconAddPhoto} alt="" />
+                Add photo
+              </Button>
+              <Button className="button-video" typeSecondary>
+                <img src={iconVideo} alt="" />
+                Add link for video
+              </Button>
             </div>
           </header>
           <div className="album__body">

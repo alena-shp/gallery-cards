@@ -6,9 +6,16 @@ import { default as MaterialButton } from '@material-ui/core/Button'
 import './index.css'
 
 const Button = props => {
-  const { className, children, typePrimary, ...restProps } = props
+  const {
+    className,
+    children,
+    typePrimary,
+    typeSecondary,
+    ...restProps
+  } = props
   const componentClass = classNames('button', className, {
-    'button--primary': typePrimary
+    'button--primary': typePrimary,
+    'button--secondary': typeSecondary
   })
 
   return (
@@ -23,11 +30,13 @@ const Button = props => {
 }
 
 Button.propTypes = {
-  typePrimary: PropTypes.bool
+  typePrimary: PropTypes.bool,
+  typeSecondary: PropTypes.bool
 }
 
 Button.defaultProps = {
-  typePrimary: false
+  typePrimary: false,
+  typeSecondary: false
 }
 
 export default Button

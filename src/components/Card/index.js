@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import iconDelete from './../../assets/delete.svg'
+import iconDelete from './../../assets/icons/delete.svg'
+
 import './index.css'
 
 const Card = props => {
